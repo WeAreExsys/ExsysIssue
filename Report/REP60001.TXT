@@ -1,0 +1,53 @@
+OBJECT Report 60001 Update Status MA
+{
+  OBJECT-PROPERTIES
+  {
+    Date=20180523D;
+    Time=111313.773T;
+    Modified=true;
+    Version List=;
+  }
+  PROPERTIES
+  {
+    ProcessingOnly=true;
+  }
+  DATASET
+  {
+    { 1   ;    ;DataItem;Maintenance Agreement;
+               DataItemTable="Maintenance Agreement";
+               DataItemTableView=SORTING("No.") WHERE(Status=CONST(Active));
+               OnAfterGetRecord=BEGIN
+                                  //Exsys-Golf
+                                  if "Ending Date (MA)" < TODAY then
+                                    begin
+                                      Status := "Maintenance Agreement".Status::Closed;
+                                      MODIFY;
+                                    end;
+                                  //*
+                                END;
+                                 }
+
+  }
+  REQUESTPAGE
+  {
+    PROPERTIES
+    {
+    }
+    CONTROLS
+    {
+    }
+  }
+  LABELS
+  {
+  }
+  CODE
+  {
+
+    BEGIN
+    END.
+  }
+  RDLDATA
+  {
+  }
+}
+
