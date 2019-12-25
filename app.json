@@ -28,11 +28,12 @@
   "platform": "15.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
-      "to": 50149
+      "from": 50000,
+      "to": 61100
     }
   ],
   "contextSensitiveHelpUrl": "https://ExsysIssue.com/help/",
   "showMyCode": true,
-  "runtime": "4.0"
+  "runtime": "4.0",
+  "target": "Internal"
 }
