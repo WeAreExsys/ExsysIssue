@@ -13,27 +13,27 @@ page 60081 "Exsys-Issue Activities"
             cuegroup(Issues)
             {
                 Caption = 'Issues';
-                field("Issues List";"Issues List")
+                field("Issues List"; "Issues List")
                 {
                     DrillDownPageID = "Issue List";
                 }
-                field("Issue-To Do";"Issue-To Do")
+                field("Issue-To Do"; "Issue-To Do")
                 {
                     Caption = 'To Do';
                     Visible = false;
                 }
-                field(IssueByUser;IssueByUser)
+                field(IssueByUser; IssueByUser)
                 {
                     Caption = 'In Process';
                     DrillDownPageID = "Issue by User";
                     Visible = false;
                 }
-                field("Issue-Close";"Issue-Close")
+                field("Issue-Close"; "Issue-Close")
                 {
                     Caption = 'Done';
                     Visible = false;
                 }
-                field("Your Task";"Your Task")
+                field("Your Task"; "Your Task")
                 {
                     Image = Checklist;
                     Visible = false;
@@ -43,7 +43,7 @@ page 60081 "Exsys-Issue Activities"
                         PAGE.RUN(60056);
                     end;
                 }
-                field("Change Request Document";"Change Request Document")
+                field("Change Request Document"; "Change Request Document")
                 {
                     Image = Checklist;
 
@@ -64,8 +64,8 @@ page 60081 "Exsys-Issue Activities"
             }
             cuegroup("MA & Expense")
             {
-                Caption = 'MA & Expense';
-                field("MA List";"MA List")
+                Caption = 'Maintenance Plan';
+                field("MA List"; "MA List")
                 {
                     DrillDownPageID = "MA List";
                 }
@@ -98,12 +98,12 @@ page 60081 "Exsys-Issue Activities"
 
     trigger OnOpenPage();
     begin
-        SETFILTER(UserFilter,USERID);
+        SETFILTER(UserFilter, USERID);
     end;
 
     local procedure CalculateCueFieldValue();
     begin
-        IssueByUser :=CalcListByUser;
+        IssueByUser := CalcListByUser;
     end;
 }
 

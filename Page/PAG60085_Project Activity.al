@@ -9,13 +9,15 @@ page 60085 "Project Activity"
         {
             cuegroup(Control3)
             {
-                field(Project;Project)
+                ShowCaption = false;
+                field(Project; Project)
+                {
+
+                }
+                field("Project-Active"; "Project-Active")
                 {
                 }
-                field("Project-Active";"Project-Active")
-                {
-                }
-                field("Project-Closed";"Project-Closed")
+                field("Project-Closed"; "Project-Closed")
                 {
                 }
             }
@@ -33,6 +35,6 @@ page 60085 "Project Activity"
     end;
 
     var
-        CompInfo : Record "Company Information";
+        CompInfo: Record "Company Information";
 }
 

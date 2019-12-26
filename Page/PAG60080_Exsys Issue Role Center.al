@@ -10,6 +10,11 @@ page 60080 "Exsys Issue Role Center"
         area(rolecenter)
         {
 
+            part(PageHeadLine; "Role Center HeadLine")
+            {
+
+            }
+
             group(Control25)
             {
                 group(Project)
@@ -30,86 +35,85 @@ page 60080 "Exsys Issue Role Center"
                 }
                 group(Control2)
                 {
-                    Caption = 'Activities';
+
                     part("Issue & MA Plan"; "Exsys-Issue Activities")
                     {
                         Caption = 'Issue & MA Plan';
                     }
                 }
             }
-            group(Control24)
+            part(Control7; "My Project")
             {
-                group(Control6)
-                {
-                    part(Control7; "My Project")
-                    {
-                        ApplicationArea = All;
-                    }
-                    systempart(Control8; Notes)
-                    {
-                        Visible = false;
-                    }
-                }
+                ApplicationArea = All;
             }
+
         }
     }
-
     actions
     {
-        area(embedding)
-        {
-            action(ProjectBtn)
-            {
-                Image = ProjectExpense;
-                RunObject = Page "Project List";
-            }
-            action("Home Expense Doc")
-            {
-                Caption = 'Expense Document';
-                RunObject = Page "Expense Document List";
-            }
-            action("Release Expense Document")
-            {
-                Caption = 'Release Expense Document';
-                Image = ReleaseDoc;
-                RunObject = Page "Release Expense Document";
-            }
-            action("Change Request")
-            {
-                Caption = 'Change Request';
-                RunObject = Page "Change Request List";
-            }
-        }
         area(sections)
         {
-            group(ExpenseBtn)
+
+            group(MenuBtn)
             {
-                Caption = 'Expense';
+                Caption = 'Menu';
                 Image = CashFlow;
-                action("Expense Code")
+
+                action(ProjectAll)
                 {
-                    Caption = 'Expense Code';
-                    Image = CashFlowSetup;
-                    RunObject = Page "Expense Code";
+                    Caption = 'Project';
+                    RunObject = Page "Project List";
                 }
-                action("Expense Document")
+                action(ProjectActive)
                 {
-                    Caption = 'Expense Document';
-                    Image = ProjectExpense;
-                    RunObject = Page "Expense Document List";
+                    Caption = 'Active';
+                    RunObject = Page "Project List";
+                    RunPageView = SORTING("No.") WHERE(Status = CONST(Active));
                 }
-                action(Action32)
+                action(ProjectClosed)
                 {
-                    Caption = 'Release Expense Document';
-                    Image = ReleaseDoc;
-                    RunObject = Page "Release Expense Document";
+                    Caption = 'Closed';
+                    RunObject = Page "Project List";
+                    RunPageView = SORTING("No.") WHERE(Status = CONST(Closed));
                 }
+                group(ExpDoc)
+                {
+                    Caption = 'Expense';
+
+                    action("Expense Document")
+                    {
+                        Caption = 'Expense Document';
+                        Image = ProjectExpense;
+                        RunObject = Page "Expense Document List";
+                    }
+                    action(Action32)
+                    {
+                        Caption = 'Release Expense Document';
+                        Image = ReleaseDoc;
+                        RunObject = Page "Release Expense Document";
+                    }
+                }
+
+
+                action("Change Request")
+                {
+                    Caption = 'Change Request';
+                    RunObject = Page "Change Request List";
+                }
+
+                action(MAPlan)
+                {
+                    Caption = 'Maintenance Plan';
+                    RunObject = Page "MA List";
+                }
+
             }
         }
         area(processing)
         {
-            group(ActionGroup13)
+            group(SystemSetup)
             {
+                Caption = 'System Setup';
                 action("Issue Notification")
                 {
                     Caption = 'Issue Notification';

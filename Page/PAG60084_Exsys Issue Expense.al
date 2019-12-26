@@ -9,12 +9,13 @@ page 60084 "Exsys-Issue Expense"
         {
             cuegroup(Control2)
             {
-                field("Expense Doc.";"Expense Doc.")
+                ShowCaption = false;
+                field("Expense Doc."; "Expense Doc.")
                 {
                     Caption = 'Expense Document';
                     DrillDownPageID = "Expense Document List";
                 }
-                field("Release Expense Document";"Release Expense Document")
+                field("Release Expense Document"; "Release Expense Document")
                 {
                     DrillDownPageID = "Release Expense Document";
                 }
@@ -27,6 +28,6 @@ page 60084 "Exsys-Issue Expense"
     }
 
     var
-        TaskSetup : Integer;
+        TaskSetup: Integer;
 }
 
