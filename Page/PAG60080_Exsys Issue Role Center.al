@@ -9,13 +9,13 @@ page 60080 "Exsys Issue Role Center"
     {
         area(rolecenter)
         {
-            Caption = 'Activities';
+
             group(Control25)
             {
                 group(Project)
                 {
                     Caption = 'Project';
-                    part(Control23;"Project Activity")
+                    part(Control23; "Project Activity")
                     {
                         Caption = 'Project';
                     }
@@ -23,7 +23,7 @@ page 60080 "Exsys Issue Role Center"
                 group(Setup)
                 {
                     Caption = 'Setup';
-                    part(Expense;"Exsys-Issue Expense")
+                    part(Expense; "Exsys-Issue Expense")
                     {
                         Caption = 'Expense';
                     }
@@ -31,7 +31,7 @@ page 60080 "Exsys Issue Role Center"
                 group(Control2)
                 {
                     Caption = 'Activities';
-                    part("Issue & MA Plan";"Exsys-Issue Activities")
+                    part("Issue & MA Plan"; "Exsys-Issue Activities")
                     {
                         Caption = 'Issue & MA Plan';
                     }
@@ -41,11 +41,11 @@ page 60080 "Exsys Issue Role Center"
             {
                 group(Control6)
                 {
-                    part(Control7;"My Project")
+                    part(Control7; "My Project")
                     {
                         ApplicationArea = All;
                     }
-                    systempart(Control8;Notes)
+                    systempart(Control8; Notes)
                     {
                         Visible = false;
                     }
@@ -58,7 +58,7 @@ page 60080 "Exsys Issue Role Center"
     {
         area(embedding)
         {
-            action(Project)
+            action(ProjectBtn)
             {
                 Image = ProjectExpense;
                 RunObject = Page "Project List";
@@ -82,7 +82,7 @@ page 60080 "Exsys Issue Role Center"
         }
         area(sections)
         {
-            group(Expense)
+            group(ExpenseBtn)
             {
                 Caption = 'Expense';
                 Image = CashFlow;

@@ -13,16 +13,16 @@ page 60002 "Project List"
         {
             repeater(Group)
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field(Name;Name)
+                field(Name; Name)
                 {
                 }
-                field("Registered Date";"Registered Date")
+                field("Registered Date"; "Registered Date")
                 {
                 }
-                field(Status;Status)
+                field(Status; Status)
                 {
                 }
             }
@@ -40,7 +40,7 @@ page 60002 "Project List"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page "Project Phase List";
-                RunPageLink = "Project No."=FIELD("No.");
+                RunPageLink = "Project No." = FIELD("No.");
             }
             action(Location)
             {
@@ -49,7 +49,7 @@ page 60002 "Project List"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page "Project Location";
-                RunPageLink = "Project No."=FIELD("No.");
+                RunPageLink = "Project No." = FIELD("No.");
             }
             action("License Package")
             {
@@ -58,8 +58,9 @@ page 60002 "Project List"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page "License Package";
-                RunPageLink = "Project No."=FIELD("No.");
+                RunPageLink = "Project No." = FIELD("No.");
             }
+            /*
             action("Export License Package")
             {
                 Image = Excel;
@@ -77,7 +78,8 @@ page 60002 "Project List"
                     SQLConnection.ShowObjList(Rec);
                     //+
                 end;
-            }
+            }*/
+
             separator(Separator12)
             {
             }
@@ -89,7 +91,7 @@ page 60002 "Project List"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 RunObject = Page "MA List";
-                RunPageLink = "Project No."=FIELD("No.");
+                RunPageLink = "Project No." = FIELD("No.");
             }
         }
     }

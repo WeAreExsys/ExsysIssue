@@ -10,23 +10,23 @@ page 60024 "Issue Attach File"
         {
             repeater(Group)
             {
-                field("Issue No.";"Issue No.")
+                field("Issue No."; "Issue No.")
                 {
                     Editable = false;
                 }
-                field("Line No.";"Line No.")
+                field("Line No."; "Line No.")
                 {
                     Editable = false;
                 }
-                field("File Name";"File Name")
+                field("File Name"; "File Name")
                 {
                     Editable = false;
                 }
-                field("Creation Date";"Creation Date")
+                field("Creation Date"; "Creation Date")
                 {
                     Editable = false;
                 }
-                field("Created By";"Created By")
+                field("Created By"; "Created By")
                 {
                     Editable = false;
                 }
@@ -83,30 +83,29 @@ page 60024 "Issue Attach File"
                     begin
                         //Exsys-Golf
                         CLEAR(FileMgt);
-                        CLEAR(CommMgt);
                         IssueNotification.GET;
                         IssueNotification.TESTFIELD("Attach Path File");
-                        PathFile := CommMgt.OpenFile('Save as','',0,'*.*',1);
+                        PathFile := FileMgt.SaveFileDialog('Save as', '', '*.*');
+                        //PathFile := CommMgt.OpenFile('Save as','',0,'*.*',1); //Old Code
 
                         //Find File Name
                         PathFileName := PathFile;
                         ExistFileName := false;
                         repeat
-                          if STRPOS(PathFileName,'/') <> 0 then
-                          begin
-                            Position := STRPOS(PathFileName,'/');
-                            PathFileName := COPYSTR(PathFileName,Position+1);
-                          end else
-                            ExistFileName := true;
+                            if STRPOS(PathFileName, '/') <> 0 then begin
+                                Position := STRPOS(PathFileName, '/');
+                                PathFileName := COPYSTR(PathFileName, Position + 1);
+                            end else
+                                ExistFileName := true;
                         until ExistFileName = true;
 
                         //Cut Folder Path File
-                        Position := STRPOS(PathFile,PathFileName);
-                        PathFile := COPYSTR(PathFile,1,Position-2);
+                        Position := STRPOS(PathFile, PathFileName);
+                        PathFile := COPYSTR(PathFile, 1, Position - 2);
 
                         //Upload File
-                        UpToFile := IssueNotification."Attach Path File"+'/'+PathFileName;
-                        UPLOAD('Upload',PathFile,'',PathFileName,UpToFile);
+                        UpToFile := IssueNotification."Attach Path File" + '/' + PathFileName;
+                        UPLOAD('Upload', PathFile, '', PathFileName, UpToFile);
 
                         MESSAGE('Success');
                         //*
@@ -117,14 +116,13 @@ page 60024 "Issue Attach File"
     }
 
     var
-        FileMgt : Codeunit "File Management";
-        IssueNotification : Record "Issue Notification";
-        CommMgt : Codeunit Codeunit50000;
-        PathFile : Text[1024];
-        PathFileName : Text[100];
-        Position : Integer;
-        ExistFileName : Boolean;
-        UpToFile : Text[1024];
-        ExsysFileMgt : Codeunit "Exsys Issue File Mgt.";
+        FileMgt: Codeunit "File Management";
+        IssueNotification: Record "Issue Notification";
+        PathFile: Text[1024];
+        PathFileName: Text[100];
+        Position: Integer;
+        ExistFileName: Boolean;
+        UpToFile: Text[1024];
+        ExsysFileMgt: Codeunit "Exsys Issue File Mgt.";
 }
 

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Adr">
+          <DataField>Company_Adr</DataField>
+        </Field>
+        <Field Name="Company_Adr2">
+          <DataField>Company_Adr2</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_PostCode">
+          <DataField>Company_PostCode</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_FaxNo">
+          <DataField>Company_FaxNo</DataField>
+        </Field>
+        <Field Name="Company_HomePage">
+          <DataField>Company_HomePage</DataField>
+        </Field>
+        <Field Name="No_ExpenseHeader">
+          <DataField>No_ExpenseHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_ExpenseHeader">
+          <DataField>DocumentDate_ExpenseHeader</DataField>
+        </Field>
+        <Field Name="UserSetup_FullName">
+          <DataField>UserSetup_FullName</DataField>
+        </Field>
+        <Field Name="UserSetup_DepartMent">
+          <DataField>UserSetup_DepartMent</DataField>
+        </Field>
+        <Field Name="UserSetup_Position">
+          <DataField>UserSetup_Position</DataField>
+        </Field>
+        <Field Name="Position_Name">
+          <DataField>Position_Name</DataField>
+        </Field>
+        <Field Name="DepartMent_Name">
+          <DataField>DepartMent_Name</DataField>
+        </Field>
+        <Field Name="Description_ExpenseLine">
+          <DataField>Description_ExpenseLine</DataField>
+        </Field>
+        <Field Name="FromDate_ExpenseLine">
+          <DataField>FromDate_ExpenseLine</DataField>
+        </Field>
+        <Field Name="ToDate_ExpenseLine">
+          <DataField>ToDate_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Quantity_ExpenseLine">
+          <DataField>Quantity_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Quantity_ExpenseLineFormat">
+          <DataField>Quantity_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="UnitAmount_ExpenseLine">
+          <DataField>UnitAmount_ExpenseLine</DataField>
+        </Field>
+        <Field Name="UnitAmount_ExpenseLineFormat">
+          <DataField>UnitAmount_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="Amount_ExpenseLine">
+          <DataField>Amount_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Amount_ExpenseLineFormat">
+          <DataField>Amount_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="ProjectNo_ExpenseLine">
+          <DataField>ProjectNo_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Number_Integer">
+          <DataField>Number_Integer</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

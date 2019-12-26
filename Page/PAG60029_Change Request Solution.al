@@ -11,13 +11,14 @@ page 60029 "Change Request Solution"
         {
             repeater(Group)
             {
-                field("Line No.";"Line No.")
+                field("Line No."; "Line No.")
                 {
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
+
                 }
-                field("Not Show";"Not Show")
+                field("Not Show"; "Not Show")
                 {
                 }
             }

@@ -11,10 +11,10 @@ page 60023 "Issue Notification"
         {
             group(General)
             {
-                field("Send E-Mail";"Send E-Mail")
+                field("Send E-Mail"; "Send E-Mail")
                 {
                 }
-                field("Attach Path File";"Attach Path File")
+                field("Attach Path File"; "Attach Path File")
                 {
                 }
             }
@@ -26,8 +26,7 @@ page 60023 "Issue Notification"
     }
 
     var
-        FileMgt : Codeunit "File Management";
-        TempBlob : Record TempBlob;
-        FileName : Text[1024];
+        FileMgt: Codeunit "File Management";
+        FileName: Text[1024];
 }
 

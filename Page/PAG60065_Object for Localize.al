@@ -12,28 +12,28 @@ page 60065 "Object for Localize"
         {
             repeater(Group)
             {
-                field(Type;Type)
+                field(Type; Type)
                 {
                 }
-                field(ID;ID)
+                field(ID; ID)
                 {
                 }
-                field(Name;Name)
+                field(Name; Name)
                 {
                 }
-                field(Modified;Modified)
+                field(Modified; Modified)
                 {
                 }
-                field(Compiled;Compiled)
+                field(Compiled; Compiled)
                 {
                 }
-                field(Date;Date)
+                field(Date; Date)
                 {
                 }
-                field(Time;Time)
+                field(Time; Time)
                 {
                 }
-                field("Version List";"Version List")
+                field("Version List"; "Version List")
                 {
                 }
             }
@@ -46,7 +46,7 @@ page 60065 "Object for Localize"
 
     trigger OnInit();
     begin
-        CODEUNIT.RUN(CODEUNIT::"SQL Connection");
+        //CODEUNIT.RUN(CODEUNIT::"SQL Connection");
     end;
 }
 

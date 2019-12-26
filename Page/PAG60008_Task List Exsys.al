@@ -1,4 +1,4 @@
-page 60008 "Task List"
+page 60008 "Task List Exsys"
 {
     // version Issue
 
@@ -11,28 +11,28 @@ page 60008 "Task List"
         {
             repeater(Group)
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
                 }
-                field(Implement;Implement)
+                field(Implement; Implement)
                 {
                 }
-                field(Maintenance;Maintenance)
+                field(Maintenance; Maintenance)
                 {
                 }
-                field("Chargable Service";"Chargable Service")
+                field("Chargable Service"; "Chargable Service")
                 {
                 }
-                field(Other;Other)
+                field(Other; Other)
                 {
                 }
-                field(Onsite;Onsite)
+                field(Onsite; Onsite)
                 {
                 }
-                field("Required Sign-off";"Required Sign-off")
+                field("Required Sign-off"; "Required Sign-off")
                 {
                 }
             }

@@ -1,166 +1,4 @@
-OBJECT Report 60000 Expense Document
-{
-  OBJECT-PROPERTIES
-  {
-    Date=20150922D;
-    Time=190556.887T;
-    Modified=true;
-    Version List=;
-  }
-  PROPERTIES
-  {
-  }
-  DATASET
-  {
-    { 1   ;    ;DataItem;Expense Header      ;
-               DataItemTable="Expense Header";
-               DataItemTableView=SORTING("No.");
-               OnPreDataItem=BEGIN
-                               //Exsys-Wichit 220915
-                               CompanyInfo.GET;
-                               CompanyInfo.CALCFIELDS(Picture);
-                               //+
-                             END;
-
-               OnAfterGetRecord=BEGIN
-                                  //Exsys-Wichit 220915
-                                  MaxLine := 10;
-                                  CLEAR(LineCount);
-
-                                  UserSetup.RESET;
-                                  if UserSetup.GET("Requested by") then begin
-                                    Position.RESET;
-                                    if Position.GET(UserSetup.Position) then;
-                                    DepartMent.RESET;
-                                    if DepartMent.GET(UserSetup.Department) then;
-                                  end;
-                                  //+
-                                END;
-
-               ReqFilterFields="No." }
-
-    { 13  ;1   ;Column  ;Company_Name        ;
-               SourceExpr=CompanyInfo.Name }
-
-    { 14  ;1   ;Column  ;Company_Adr         ;
-               SourceExpr=CompanyInfo.Address }
-
-    { 15  ;1   ;Column  ;Company_Adr2        ;
-               SourceExpr=CompanyInfo."Address 2" }
-
-    { 16  ;1   ;Column  ;Company_City        ;
-               SourceExpr=CompanyInfo.City }
-
-    { 17  ;1   ;Column  ;Company_PostCode    ;
-               SourceExpr=CompanyInfo."Post Code" }
-
-    { 19  ;1   ;Column  ;Company_PhoneNo     ;
-               SourceExpr=CompanyInfo."Phone No." }
-
-    { 18  ;1   ;Column  ;Company_Picture     ;
-               SourceExpr=CompanyInfo.Picture }
-
-    { 20  ;1   ;Column  ;Company_FaxNo       ;
-               SourceExpr=CompanyInfo."Fax No." }
-
-    { 21  ;1   ;Column  ;Company_HomePage    ;
-               SourceExpr=CompanyInfo."Home Page" }
-
-    { 5   ;1   ;Column  ;No_ExpenseHeader    ;
-               SourceExpr="Expense Header"."No." }
-
-    { 6   ;1   ;Column  ;DocumentDate_ExpenseHeader;
-               SourceExpr="Expense Header"."Document Date" }
-
-    { 22  ;1   ;Column  ;UserSetup_FullName  ;
-               SourceExpr=UserSetup."Full Name" }
-
-    { 23  ;1   ;Column  ;UserSetup_DepartMent;
-               SourceExpr=UserSetup.Department }
-
-    { 24  ;1   ;Column  ;UserSetup_Position  ;
-               SourceExpr=UserSetup.Position }
-
-    { 26  ;1   ;Column  ;Position_Name       ;
-               SourceExpr=Position.Name }
-
-    { 27  ;1   ;Column  ;DepartMent_Name     ;
-               SourceExpr=DepartMent.Name }
-
-    { 2   ;1   ;DataItem;Expense Line        ;
-               DataItemTable="Expense Line";
-               DataItemTableView=SORTING("Document No.","Line No.");
-               OnAfterGetRecord=BEGIN
-                                  //Exsys-Wichit 220915
-                                  LineCount += 1;
-                                  //+
-                                END;
-
-               DataItemLink="Document No."=FIELD("No.") }
-
-    { 7   ;2   ;Column  ;Description_ExpenseLine;
-               SourceExpr="Expense Line".Description }
-
-    { 8   ;2   ;Column  ;FromDate_ExpenseLine;
-               SourceExpr="Expense Line"."From Date" }
-
-    { 9   ;2   ;Column  ;ToDate_ExpenseLine  ;
-               SourceExpr="Expense Line"."To Date" }
-
-    { 10  ;2   ;Column  ;Quantity_ExpenseLine;
-               SourceExpr="Expense Line".Quantity }
-
-    { 11  ;2   ;Column  ;UnitAmount_ExpenseLine;
-               SourceExpr="Expense Line"."Unit Amount" }
-
-    { 12  ;2   ;Column  ;Amount_ExpenseLine  ;
-               SourceExpr="Expense Line".Amount }
-
-    { 25  ;2   ;Column  ;ProjectNo_ExpenseLine;
-               SourceExpr="Expense Line"."Project No." }
-
-    { 3   ;1   ;DataItem;Integer             ;
-               DataItemTable=Integer;
-               DataItemTableView=SORTING(Number);
-               OnPreDataItem=BEGIN
-                               //Exsys-Wichit 220915
-                               SETRANGE(Number,1,MaxLine - LineCount);
-                               //+
-                             END;
-                              }
-
-    { 4   ;2   ;Column  ;Number_Integer      ;
-               SourceExpr=Integer.Number }
-
-  }
-  REQUESTPAGE
-  {
-    PROPERTIES
-    {
-    }
-    CONTROLS
-    {
-    }
-  }
-  LABELS
-  {
-  }
-  CODE
-  {
-    VAR
-      CompanyInfo@1000 : Record "Company Information";
-      MaxLine@1001 : Integer;
-      LineCount@1002 : Integer;
-      UserSetup@1003 : Record "User Setup";
-      Position@1004 : Record Position;
-      DepartMent@1005 : Record Department;
-
-    BEGIN
-    END.
-  }
-  RDLDATA
-  {
-    <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1506,7 +1344,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">To (�֧):</Value>
+                      <Value EvaluationMode="Auto">To (ถึง):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1579,7 +1417,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">From (�����ԡ):</Value>
+                      <Value EvaluationMode="Auto">From (ผู้ขอเบิก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1652,7 +1490,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Position (���˹�):</Value>
+                      <Value EvaluationMode="Auto">Position (ตำแหน่ง):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1725,7 +1563,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Department (Ἱ�):</Value>
+                      <Value EvaluationMode="Auto">Department (แผนก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1798,7 +1636,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (�ѹ���):</Value>
+                      <Value EvaluationMode="Auto">Date (วันที่):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1949,7 +1787,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">-���¡��㴷����������Ѻ�Թ ��س�Ṻ������Ѻ�Թ�Ҵ��·ء����</Value>
+                      <Value EvaluationMode="Auto">- รายการใดที่มีใบเสร็จรับเงิน กรุณาแนบใบเสร็จรับเงินมาด้วยทุกครั้ง</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1996,7 +1834,7 @@ OBJECT Report 60000 Expense Document
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value xml:space="preserve" EvaluationMode="Auto">� </Value>
+                      <Value xml:space="preserve" EvaluationMode="Auto">  </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Times New Roman</FontFamily>
@@ -2007,7 +1845,7 @@ OBJECT Report 60000 Expense Document
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value EvaluationMode="Auto">������Ѻ�Թ�кت��� �����ѷ �͡���� �ӡѴ� ��ҹ��</Value>
+                      <Value EvaluationMode="Auto">ใบเสร็จรับเงินระบุชื่อ “บริษัท เอกซ์ซิส จำกัด” เท่านั้น</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2044,7 +1882,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">�����˵�: </Value>
+                      <Value EvaluationMode="Auto">หมายเหตุ: </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2081,7 +1919,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (�ѹ���)....................................</Value>
+                      <Value EvaluationMode="Auto">Date (วันที่)....................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2192,7 +2030,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (�ѹ���)....................................</Value>
+                      <Value EvaluationMode="Auto">Date (วันที่)....................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2229,7 +2067,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Approved by (���͹��ѵ�):</Value>
+                      <Value EvaluationMode="Auto">Approved by (ผู้อนุมัติ):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2316,7 +2154,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Request By (�����ԡ):</Value>
+                      <Value EvaluationMode="Auto">Request By (ผู้ขอเบิก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2353,7 +2191,7 @@ OBJECT Report 60000 Expense Document
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (�ѹ���)</Value>
+                      <Value EvaluationMode="Auto">Date (วันที่)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2555,7 +2393,3 @@ End Function
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
 </Report>
-    END_OF_RDLDATA
-  }
-}
-
