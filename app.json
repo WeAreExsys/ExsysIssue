@@ -35,5 +35,5 @@
   "contextSensitiveHelpUrl": "https://ExsysIssue.com/help/",
   "showMyCode": true,
   "runtime": "4.0",
-  "target": "Internal"
+  "target": "OnPrem"
 }
