@@ -9,15 +9,24 @@ page 60086 "Role Center HeadLine"
         {
             group(Group1)
             {
-                field(HeadLine1; StrSubstNo(text001, Compinfo.Name))
-                {
 
-
-                }
-                /*field(HL2; Compinfo.Picture)
+                /*field(HeadLine1; StrSubstNo('%1 %2', 'Welcome', Compinfo.Name))
                 {
 
                 }*/
+
+                field(headline1; headlineMgt.GetUserGreetingText())
+                {
+
+                }
+
+                field(HeadLine2; StrSubstNo(text002, 'Files Shared Drive'))
+                {
+                    trigger OnDrillDown()
+                    begin
+                        Hyperlink('ftp://ftp.exsys.co.th');
+                    end;
+                }
             }
         }
 
@@ -30,7 +39,10 @@ page 60086 "Role Center HeadLine"
     end;
 
     var
-        HeadLine1: TextConst ENU = 'Exsys Co., Ltd.';
         Compinfo: Record "Company Information";
-        text001: TextConst ENU = '<qualifier>%1</qualifier><payload>This is the <emphasize>%1</emphasize>.</payload>';
+        text001: TextConst ENU = '<qualifier>%1</qualifier>';
+        text002: TextConst ENU = '<payload><emphasize>%1</emphasize></payload>';
+
+        headlineMgt: Codeunit "Headlines";
+
 }

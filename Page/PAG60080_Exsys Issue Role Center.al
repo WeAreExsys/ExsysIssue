@@ -111,88 +111,98 @@ page 60080 "Exsys Issue Role Center"
         }
         area(processing)
         {
+            /*
             group(SystemSetup)
             {
-                Caption = 'System Setup';
-                action("Issue Notification")
-                {
-                    Caption = 'Issue Notification';
-                    Image = Alerts;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    RunObject = Page "Issue Notification";
-                }
-                action("Task Setup")
-                {
-                    Caption = 'Task Setup';
-                    Image = TaskList;
-                    Promoted = true;
-                    PromotedCategory = New;
-                    PromotedIsBig = true;
-                    RunObject = Page "Task List";
-                }
-                action("Project Setup")
-                {
-                    Caption = 'Project Setup';
-                    Image = ProjectToolsProjectMaintenance;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    RunObject = Page "Project List";
-                }
-                action("Expense Setup")
-                {
-                    Caption = 'Expense Setup';
-                    Image = ContractPayment;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    RunObject = Page "Expense Code";
-                }
-                action("Project Management Setup")
-                {
-                    Caption = 'Project Management Setup';
-                    Image = Setup;
-                    RunObject = Page "Project Management Setup";
-                }
-                action("Company Infomation")
-                {
-                    Caption = 'Company Infomation';
-                    Image = CompanyInformation;
-                    RunObject = Page "Company Information";
-                }
-                action("No. Series")
-                {
-                    Caption = 'No. Series';
-                    Image = NumberSetup;
-                    RunObject = Page "No. Series";
-                }
-                action("Resource Usage")
-                {
-                    Caption = 'Resource Usage';
-                    Image = Planning;
-                    Promoted = true;
-                    PromotedCategory = New;
-                    PromotedIsBig = true;
-                    RunObject = Page "Resource Usage";
-                }
-                action(DocumentHomeRoom)
-                {
-                    Caption = 'Document HomeRoom';
-                    Image = Document;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    PromotedOnly = true;
-                    RunObject = Page "Document Homeroom List";
-                    RunPageOnRec = true;
-                }
-                action("Tracking Your Team")
-                {
-                    Image = Track;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    PromotedOnly = true;
-                    RunObject = Page "Tracking Working on Your Team";
-                }
+                Caption = 'System Setup'; */
+            action("Issue Notification")
+            {
+                Caption = 'Issue Notification';
+                Image = Alerts;
+                Promoted = true;
+                PromotedIsBig = true;
+                RunObject = Page "Issue Notification";
             }
+            action("Task Setup")
+            {
+                Caption = 'Task Setup';
+                Image = TaskList;
+                Promoted = true;
+                PromotedCategory = New;
+                PromotedIsBig = true;
+                RunObject = Page "Task List";
+            }
+            action("Project Setup")
+            {
+                Caption = 'Project Setup';
+                Image = ProjectToolsProjectMaintenance;
+                Promoted = true;
+                PromotedIsBig = true;
+                RunObject = Page "Project List";
+            }
+            action("Expense Setup")
+            {
+                Caption = 'Expense Setup';
+                Image = ContractPayment;
+                Promoted = true;
+                PromotedIsBig = true;
+                RunObject = Page "Expense Code";
+            }
+            action("Project Management Setup")
+            {
+                Caption = 'Project Management Setup';
+                Image = Setup;
+                RunObject = Page "Project Management Setup";
+            }
+            action("Company Infomation")
+            {
+                Caption = 'Company Infomation';
+                Image = CompanyInformation;
+                RunObject = Page "Company Information";
+            }
+            action("No. Series")
+            {
+                Caption = 'No. Series';
+                Image = NumberSetup;
+                RunObject = Page "No. Series";
+            }
+            action("Resource Usage")
+            {
+                Caption = 'Resource Usage';
+                Image = Planning;
+                Promoted = true;
+                PromotedCategory = New;
+                PromotedIsBig = true;
+                RunObject = Page "Resource Usage";
+            }
+            action(DocumentHomeRoom)
+            {
+                Caption = 'Document HomeRoom';
+                Image = Document;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                RunObject = Page "Document Homeroom List";
+                RunPageOnRec = true;
+            }
+            action("Tracking Your Team")
+            {
+                Image = Track;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                RunObject = Page "Tracking Working on Your Team";
+            }
+
+            action("FTP Share")
+            {
+                Image = Document;
+                Promoted = true;
+                PromotedIsBig = true;
+                RunObject = codeunit "FTP URL";
+            }
+
+            //}
         }
     }
 }
