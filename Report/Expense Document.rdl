@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -7,105 +7,10 @@
         <DataProvider>SQL</DataProvider>
         <ConnectString />
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>48c2fd61-bcce-49b7-826b-82872f64a53f</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Adr">
-          <DataField>Company_Adr</DataField>
-        </Field>
-        <Field Name="Company_Adr2">
-          <DataField>Company_Adr2</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_PostCode">
-          <DataField>Company_PostCode</DataField>
-        </Field>
-        <Field Name="Company_PhoneNo">
-          <DataField>Company_PhoneNo</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_FaxNo">
-          <DataField>Company_FaxNo</DataField>
-        </Field>
-        <Field Name="Company_HomePage">
-          <DataField>Company_HomePage</DataField>
-        </Field>
-        <Field Name="No_ExpenseHeader">
-          <DataField>No_ExpenseHeader</DataField>
-        </Field>
-        <Field Name="DocumentDate_ExpenseHeader">
-          <DataField>DocumentDate_ExpenseHeader</DataField>
-        </Field>
-        <Field Name="UserSetup_FullName">
-          <DataField>UserSetup_FullName</DataField>
-        </Field>
-        <Field Name="UserSetup_DepartMent">
-          <DataField>UserSetup_DepartMent</DataField>
-        </Field>
-        <Field Name="UserSetup_Position">
-          <DataField>UserSetup_Position</DataField>
-        </Field>
-        <Field Name="Position_Name">
-          <DataField>Position_Name</DataField>
-        </Field>
-        <Field Name="DepartMent_Name">
-          <DataField>DepartMent_Name</DataField>
-        </Field>
-        <Field Name="Description_ExpenseLine">
-          <DataField>Description_ExpenseLine</DataField>
-        </Field>
-        <Field Name="FromDate_ExpenseLine">
-          <DataField>FromDate_ExpenseLine</DataField>
-        </Field>
-        <Field Name="ToDate_ExpenseLine">
-          <DataField>ToDate_ExpenseLine</DataField>
-        </Field>
-        <Field Name="Quantity_ExpenseLine">
-          <DataField>Quantity_ExpenseLine</DataField>
-        </Field>
-        <Field Name="Quantity_ExpenseLineFormat">
-          <DataField>Quantity_ExpenseLineFormat</DataField>
-        </Field>
-        <Field Name="UnitAmount_ExpenseLine">
-          <DataField>UnitAmount_ExpenseLine</DataField>
-        </Field>
-        <Field Name="UnitAmount_ExpenseLineFormat">
-          <DataField>UnitAmount_ExpenseLineFormat</DataField>
-        </Field>
-        <Field Name="Amount_ExpenseLine">
-          <DataField>Amount_ExpenseLine</DataField>
-        </Field>
-        <Field Name="Amount_ExpenseLineFormat">
-          <DataField>Amount_ExpenseLineFormat</DataField>
-        </Field>
-        <Field Name="ProjectNo_ExpenseLine">
-          <DataField>ProjectNo_ExpenseLine</DataField>
-        </Field>
-        <Field Name="Number_Integer">
-          <DataField>Number_Integer</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -151,7 +56,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">No.</Value>
+                                  <Value>No.</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -187,7 +92,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Description</Value>
+                                  <Value>Description</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -223,7 +128,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Project</Value>
+                                  <Value>Project</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -259,7 +164,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Date</Value>
+                                  <Value>Date</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -295,7 +200,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Quantity</Value>
+                                  <Value>Quantity</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -331,7 +236,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Unit</Value>
+                                  <Value>Unit</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -367,7 +272,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Amount</Value>
+                                  <Value>Amount</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -403,7 +308,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -444,7 +349,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=RowNumber(Nothing)</Value>
+                                  <Value>=RowNumber(Nothing)</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -478,7 +383,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Description_ExpenseLine.Value</Value>
+                                  <Value>=Fields!Description_ExpenseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -510,7 +415,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!ProjectNo_ExpenseLine.Value</Value>
+                                  <Value>=Fields!ProjectNo_ExpenseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -544,7 +449,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Format(Fields!FromDate_ExpenseLine.Value,"dd/MM/yyyy") + " - " + Format(Fields!ToDate_ExpenseLine.Value,"dd/MM/yyyy")</Value>
+                                  <Value>=Format(Fields!FromDate_ExpenseLine.Value,"dd/MM/yyyy") + " - " + Format(Fields!ToDate_ExpenseLine.Value,"dd/MM/yyyy")</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -578,7 +483,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Quantity_ExpenseLine.Value</Value>
+                                  <Value>=Fields!Quantity_ExpenseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -611,7 +516,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!UnitAmount_ExpenseLine.Value</Value>
+                                  <Value>=Fields!UnitAmount_ExpenseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -644,7 +549,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Amount_ExpenseLine.Value</Value>
+                                  <Value>=Fields!Amount_ExpenseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -677,7 +582,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Code.SetData(Fields!UserSetup_FullName.Value + chr(177) + 
+                                  <Value>=Code.SetData(Fields!UserSetup_FullName.Value + chr(177) + 
              Fields!UserSetup_Position.Value  + chr(177) + 
 			 Fields!UserSetup_DepartMent.Value + chr(177) + 
 			 Fields!DocumentDate_ExpenseHeader.Value + chr(177) + 
@@ -721,7 +626,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -755,7 +660,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -787,7 +692,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -821,7 +726,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -855,7 +760,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -887,7 +792,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -919,7 +824,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -951,7 +856,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -988,7 +893,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Total Amount</Value>
+                                  <Value>Total Amount</Value>
                                   <Style>
                                     <FontFamily>tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1029,7 +934,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!Amount_ExpenseLine.Value)</Value>
+                                  <Value>=Sum(Fields!Amount_ExpenseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1062,7 +967,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1149,7 +1054,6 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0cm</Top>
             <Left>2.11349cm</Left>
             <Height>2.4cm</Height>
             <Width>25.92854cm</Width>
@@ -1192,7 +1096,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Fields!Company_Name.Value</Value>
+                      <Value>=Fields!Company_Name.Value</Value>
                       <Style>
                         <FontFamily>Calibri (Body)</FontFamily>
                         <FontSize>11pt</FontSize>
@@ -1226,7 +1130,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Fields!Company_Adr.Value + " " + Fields!Company_Adr2.Value</Value>
+                      <Value>=Fields!Company_Adr.Value + " " + Fields!Company_Adr2.Value</Value>
                       <Style>
                         <FontSize>8.5pt</FontSize>
                       </Style>
@@ -1258,7 +1162,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">="Tel: " + Fields!Company_PhoneNo.Value + " Fax: " + Fields!Company_FaxNo.Value + " Web Site: " + Fields!Company_HomePage.Value</Value>
+                      <Value>="Tel: " + Fields!Company_PhoneNo.Value + " Fax: " + Fields!Company_FaxNo.Value + " Web Site: " + Fields!Company_HomePage.Value</Value>
                       <Style>
                         <FontSize>8.5pt</FontSize>
                       </Style>
@@ -1303,7 +1207,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">EXPENSES FORM</Value>
+                      <Value>EXPENSES FORM</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1344,7 +1248,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">To (ถึง):</Value>
+                      <Value>To (ถึง):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1381,7 +1285,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">K.Pimpa Muangsod</Value>
+                      <Value>K.Pimpa Muangsod</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1417,7 +1321,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">From (ผู้ขอเบิก):</Value>
+                      <Value>From (ผู้ขอเบิก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1454,7 +1358,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(1,1)</Value>
+                      <Value>=Code.Getdata(1,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1490,7 +1394,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Position (ตำแหน่ง):</Value>
+                      <Value>Position (ตำแหน่ง):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1527,7 +1431,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(5,1)</Value>
+                      <Value>=Code.Getdata(5,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1563,7 +1467,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Department (แผนก):</Value>
+                      <Value>Department (แผนก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1600,7 +1504,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(6,1)</Value>
+                      <Value>=Code.Getdata(6,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1636,7 +1540,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (วันที่):</Value>
+                      <Value>Date (วันที่):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1673,7 +1577,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(4,1)</Value>
+                      <Value>=Code.Getdata(4,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1787,7 +1691,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">- รายการใดที่มีใบเสร็จรับเงิน กรุณาแนบใบเสร็จรับเงินมาด้วยทุกครั้ง</Value>
+                      <Value>- รายการใดที่มีใบเสร็จรับเงิน กรุณาแนบใบเสร็จรับเงินมาด้วยทุกครั้ง</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1823,7 +1727,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto"> -</Value>
+                      <Value> -</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1834,7 +1738,7 @@
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value xml:space="preserve" EvaluationMode="Auto">  </Value>
+                      <Value xml:space="preserve">  </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Times New Roman</FontFamily>
@@ -1845,7 +1749,7 @@
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value EvaluationMode="Auto">ใบเสร็จรับเงินระบุชื่อ “บริษัท เอกซ์ซิส จำกัด” เท่านั้น</Value>
+                      <Value>ใบเสร็จรับเงินระบุชื่อ “บริษัท เอกซ์ซิส จำกัด” เท่านั้น</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1882,7 +1786,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">หมายเหตุ: </Value>
+                      <Value>หมายเหตุ: </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1919,7 +1823,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (วันที่)....................................</Value>
+                      <Value>Date (วันที่)....................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1956,7 +1860,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Project Manager Approve:</Value>
+                      <Value>Project Manager Approve:</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -1993,7 +1897,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">....................................................</Value>
+                      <Value>....................................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2030,7 +1934,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (วันที่)....................................</Value>
+                      <Value>Date (วันที่)....................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2067,7 +1971,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Approved by (ผู้อนุมัติ):</Value>
+                      <Value>Approved by (ผู้อนุมัติ):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2104,7 +2008,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">....................................................</Value>
+                      <Value>....................................................</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2154,7 +2058,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Request By (ผู้ขอเบิก):</Value>
+                      <Value>Request By (ผู้ขอเบิก):</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2191,7 +2095,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Date (วันที่)</Value>
+                      <Value>Date (วันที่)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2228,7 +2132,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(1,1)</Value>
+                      <Value>=Code.Getdata(1,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2267,7 +2171,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Code.Getdata(4,1)</Value>
+                      <Value>=Code.Getdata(4,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Tahoma</FontFamily>
@@ -2307,10 +2211,6 @@
         </PageFooter>
         <PageHeight>21cm</PageHeight>
         <PageWidth>29.7cm</PageWidth>
-        <LeftMargin>0cm</LeftMargin>
-        <RightMargin>0cm</RightMargin>
-        <TopMargin>0cm</TopMargin>
-        <BottomMargin>0cm</BottomMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>
         <Style />
       </Page>
@@ -2392,4 +2292,95 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Adr">
+          <DataField>Company_Adr</DataField>
+        </Field>
+        <Field Name="Company_Adr2">
+          <DataField>Company_Adr2</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_PostCode">
+          <DataField>Company_PostCode</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_FaxNo">
+          <DataField>Company_FaxNo</DataField>
+        </Field>
+        <Field Name="Company_HomePage">
+          <DataField>Company_HomePage</DataField>
+        </Field>
+        <Field Name="No_ExpenseHeader">
+          <DataField>No_ExpenseHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_ExpenseHeader">
+          <DataField>DocumentDate_ExpenseHeader</DataField>
+        </Field>
+        <Field Name="UserSetup_FullName">
+          <DataField>UserSetup_FullName</DataField>
+        </Field>
+        <Field Name="UserSetup_DepartMent">
+          <DataField>UserSetup_DepartMent</DataField>
+        </Field>
+        <Field Name="UserSetup_Position">
+          <DataField>UserSetup_Position</DataField>
+        </Field>
+        <Field Name="Position_Name">
+          <DataField>Position_Name</DataField>
+        </Field>
+        <Field Name="DepartMent_Name">
+          <DataField>DepartMent_Name</DataField>
+        </Field>
+        <Field Name="Description_ExpenseLine">
+          <DataField>Description_ExpenseLine</DataField>
+        </Field>
+        <Field Name="FromDate_ExpenseLine">
+          <DataField>FromDate_ExpenseLine</DataField>
+        </Field>
+        <Field Name="ToDate_ExpenseLine">
+          <DataField>ToDate_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Quantity_ExpenseLine">
+          <DataField>Quantity_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Quantity_ExpenseLineFormat">
+          <DataField>Quantity_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="UnitAmount_ExpenseLine">
+          <DataField>UnitAmount_ExpenseLine</DataField>
+        </Field>
+        <Field Name="UnitAmount_ExpenseLineFormat">
+          <DataField>UnitAmount_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="Amount_ExpenseLine">
+          <DataField>Amount_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Amount_ExpenseLineFormat">
+          <DataField>Amount_ExpenseLineFormat</DataField>
+        </Field>
+        <Field Name="ProjectNo_ExpenseLine">
+          <DataField>ProjectNo_ExpenseLine</DataField>
+        </Field>
+        <Field Name="Number_Integer">
+          <DataField>Number_Integer</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

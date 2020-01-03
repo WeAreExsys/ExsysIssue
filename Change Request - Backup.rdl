@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -130,7 +130,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">  DESCRIPTION OF REQUESTS</Value>
+                                  <Value>  DESCRIPTION OF REQUESTS</Value>
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>13pt</FontSize>
@@ -182,7 +182,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -231,7 +231,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!TaskDescription_ChangeRequestLine.Value</Value>
+                                  <Value>=Fields!TaskDescription_ChangeRequestLine.Value</Value>
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>13pt</FontSize>
@@ -280,7 +280,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -319,7 +319,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -368,7 +368,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -404,7 +404,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">PROPOSED SOLUTION BY EXSYS</Value>
+                                  <Value>PROPOSED SOLUTION BY EXSYS</Value>
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>13pt</FontSize>
@@ -458,7 +458,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -495,7 +495,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Description_ChangeRequestSolution.Value</Value>
+                                  <Value>=Fields!Description_ChangeRequestSolution.Value</Value>
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>13pt</FontSize>
@@ -544,7 +544,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -580,7 +580,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -629,7 +629,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Browallia New</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -789,7 +789,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Project No.</Value>
+                          <Value>Project No.</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -822,7 +822,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Customer Name</Value>
+                          <Value>Customer Name</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -856,7 +856,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Submitted by</Value>
+                          <Value>Submitted by</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -889,7 +889,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Submitted on</Value>
+                          <Value>Submitted on</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -922,7 +922,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(2,1)</Value>
+                          <Value>=Code.GetData(2,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -954,7 +954,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(9,1)</Value>
+                          <Value>=Code.GetData(9,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -986,7 +986,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(5,1)</Value>
+                          <Value>=Code.GetData(5,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1018,7 +1018,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=First(Fields!ReceivedDate_ChangeRequestHeader.Value, "DataSet_Result")</Value>
+                          <Value>=First(Fields!ReceivedDate_ChangeRequestHeader.Value, "DataSet_Result")</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1054,7 +1054,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">No.</Value>
+                          <Value>No.</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1088,7 +1088,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Date</Value>
+                          <Value>Date</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1122,7 +1122,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Priority</Value>
+                          <Value>Priority</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1156,7 +1156,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Area Affected</Value>
+                          <Value>Area Affected</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1189,7 +1189,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(1,1)</Value>
+                          <Value>=Code.GetData(1,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1221,7 +1221,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=First(Fields!DocumentDate_ChangeRequestHeader.Value, "DataSet_Result")</Value>
+                          <Value>=First(Fields!DocumentDate_ChangeRequestHeader.Value, "DataSet_Result")</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1256,7 +1256,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(7,1)</Value>
+                          <Value>=Code.GetData(7,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1290,7 +1290,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Code.GetData(8,1)</Value>
+                          <Value>=Code.GetData(8,1)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1404,7 +1404,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">CHANGE REQUEST</Value>
+                          <Value>CHANGE REQUEST</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>20pt</FontSize>
@@ -1465,7 +1465,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Format(Globals!PageNumber) + " of " + Format(Globals!TotalPages)</Value>
+                          <Value>=Format(Globals!PageNumber) + " of " + Format(Globals!TotalPages)</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>12pt</FontSize>
@@ -1500,7 +1500,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">CUSTOMER INFORMATION</Value>
+                          <Value>CUSTOMER INFORMATION</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1581,7 +1581,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Est. Man-Day</Value>
+                          <Value>Est. Man-Day</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1613,7 +1613,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Customer's PM</Value>
+                          <Value>Customer's PM</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1646,7 +1646,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Approved by</Value>
+                          <Value>Approved by</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1659,7 +1659,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Signature</Value>
+                          <Value>Signature</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1692,7 +1692,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto" />
+                          <Value />
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1724,7 +1724,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Billing Required?</Value>
+                          <Value>Billing Required?</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1757,7 +1757,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Exsys's PM</Value>
+                          <Value>Exsys's PM</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1790,7 +1790,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Approved by</Value>
+                          <Value>Approved by</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1803,7 +1803,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Signature</Value>
+                          <Value>Signature</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1836,7 +1836,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=First(Fields!BillingReq.Value, "DataSet_Result")+" "+First(Fields!BillineComment_ChangeRequestHeader.Value, "DataSet_Result")</Value>
+                          <Value>=First(Fields!BillingReq.Value, "DataSet_Result")+" "+First(Fields!BillineComment_ChangeRequestHeader.Value, "DataSet_Result")</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1869,7 +1869,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">Chaiyasit Sreerattanapitag</Value>
+                          <Value>Chaiyasit Sreerattanapitag</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -1972,7 +1972,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Auto">=Format(Fields!ChargableUsageDay_ChangeRequestHeader.Value) + "  Man Days"</Value>
+                          <Value>=Format(Fields!ChargableUsageDay_ChangeRequestHeader.Value) + "  Man Days"</Value>
                           <Style>
                             <FontFamily>Browallia New</FontFamily>
                             <FontSize>13pt</FontSize>
@@ -2000,7 +2000,6 @@
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>0cm</Top>
               <Height>1.35059in</Height>
               <Width>7.28052in</Width>
               <Style>

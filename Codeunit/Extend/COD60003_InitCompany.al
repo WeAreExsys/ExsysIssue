@@ -16,11 +16,23 @@ codeunit 60003 InitCompany
             end;
     end;
 
+    local procedure initProjectManagementSetup()
+    var
+        ProjectMgtSetup: Record "Project Management Setup";
+    begin
+        with ProjectMgtSetup do
+            if not FindFirst then begin
+                init;
+                insert;
+            end;
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Company-Initialize", 'OnCompanyInitialize', '', false, false)]
     local procedure AfterInitCompany()
 
     begin
         initExsysCue();
+        initProjectManagementSetup();
 
     end;
 
@@ -28,6 +40,7 @@ codeunit 60003 InitCompany
     local procedure AfterLoginManagement()
     begin
         initExsysCue();
+        initProjectManagementSetup();
     end;
 
     var
